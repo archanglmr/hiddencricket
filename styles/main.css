@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial;
+}
+
+
+#dartboard_container {
+    /*display: none;*/
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#dartboard {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    max-height: 100%;
+}
+
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+    border-bottom: 1px solid black;
+}
+.numbers_list {
+    margin-bottom: 5%;
+}
+.numbers_list li {
+    vertical-align: top;
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 1%;
+    padding: 4% 3%;
+    font-size: 20px;
+    line-height: 20px;
+    clear: both;
+
+    width: 12%
+}
+.numbers_list.open_numbers li {}
+.numbers_list.closed_numbers li {
+    text-decoration: line-through;
+    opacity: .5;
+    background-color: red;
+}
