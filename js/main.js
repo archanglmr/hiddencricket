@@ -1,6 +1,5 @@
 $(function() {
-    var open_numbers = $('<ul>').addClass('numbers_list open_numbers'),
-        closed_numbers = $('<ul>').addClass('numbers_list closed_numbers'),
+    var numbers_list = $('<ul>').addClass('numbers_list'),
         i = 21,
         all_numbers = [],
         li;
@@ -14,15 +13,18 @@ $(function() {
             .text(' ' + (i === 21 ? 'Bull' : i) + ' ');
 
         all_numbers.push(li);
-        open_numbers.append(li);
+        numbers_list.append(li);
     }
 
     $('body')
         .append($('<h2>').text('Open Numbers'))
-        .append(open_numbers)
-        .append($('<h2>').text('Closed Numbers'))
-        .append(closed_numbers);
-
+        .append(numbers_list);
+    //$('html')
+    //    .on('touchstart', function(e) {
+    //        console.log('touchstart');
+    //        e.preventDefault();
+    //        return false;
+    //    });
 
 
 
@@ -35,31 +37,23 @@ $(function() {
         if (li.data('open')) {
             li
                 .data('open', false)
-                .removeClass('open');
-            closed_numbers
-                .prepend(li);
-
+                .addClass('closed');
             update_target(target, false);
         } else {
             li
                 .data('open', true)
-                .addClass('open');
-            update_open();
+                .removeClass('closed');
             update_target(target, true);
         }
     }
 
 
-    function update_open() {
-        var i, c;
-
-        for (i = 0, c = all_numbers.length; i < c; i += 1) {
-            if (all_numbers[i].data('open')) {
-                open_numbers.append(all_numbers[i]);
-            }
-        }
-    }
-
+    /**
+     * Finds the row on the slice on the board SVG and colors it accordingly.
+     *
+     * @param target
+     * @param open
+     */
     function update_target(target, open) {
         var el;
         if (21 === target) {
@@ -68,9 +62,10 @@ $(function() {
             el = $('#s' + target + ', #d' + target + ', #t' + target);
         }
 
-        //console.log('#' + ((21 === target) ? 'Bull' : ('s' + target)));
-        //var el = $('#' + ((21 === target) ? 'Bull' : ('s' + target)));
-
-        el.css('opacity', open ? 1 : .25);
+        if (open) {
+            el.removeClass('closed');
+        } else {
+            el.addClass('closed');
+        }
     }
 });
