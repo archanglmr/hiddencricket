@@ -62,17 +62,17 @@ h2 {
 .numbers_list li.closed {
     text-decoration: line-through;
     opacity: .5;
-    background-color: red;
+    background-color: #600;
 }
 
 
 
 /* SVG COLORS */
 #score path {
-    fill: white;
+    fill: #999;
 }
 #dartboard #s .dark {
-    fill: #444;
+    fill: #666;
 }
 #dartboard #d .dark,
 #dartboard #t .dark,
@@ -90,4 +90,8 @@ h2 {
 
 #dartboard .closed {
     opacity: .5;
+    fill: #600 !important;
+}
+#dartboard #s .closed {
+    /*fill: #600;*/
 }
