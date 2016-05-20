@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+@import "reset";
+@import "colors";
+
+
+
+html {
+    height: 100%;
+}
+body {
+    font-family: Arial;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    color: $text_color;
+}
+
+
+#dartboard_container {
+    width: 100%;
+    margin: 4% auto;
+    text-align: center;
+    max-height: 60%;
+}
+
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 3%;
+    height: 4%;
+    //vertical-align: middle;
+}
+.numbers_list {
+    margin: 0 1%;
+    height: 21%; /* this is really taking 6% more due to the 1% top/bottom margin on the <li> */
+
+    li {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: $dark_primary;
+        margin: 1%;
+        padding: 0;
+        height: 33%;
+        font-size: 20px;
+        line-height: 2;
+        clear: both;
+        border-radius: 5px;
+
+        width: 12%;
+
+        &.closed {
+            text-decoration: line-through;
+            opacity: $closed_opacity;
+            background-color: $closed_primary;
+        }
+    }
+}
+
+
+
+/* SVG STYLES AND COLORS */
+
+#dartboard {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    max-height: 100%;
+
+
+    // Numbers on the outside
+    #score path {
+        fill: $score_color;
+    }
+
+    // Singles
+    #s {
+        .dark { fill: $dark_primary; }
+        .light { fill: $light_primary; }
+    }
+
+    // doubles
+    #d, #t, #bull {
+        .dark { fill: $dark_secondary; }
+        .light { fill: $light_secondary; }
+    }
+
+    /**
+        Closed Styles
+    **/
+    .closed {
+        opacity: $closed_opacity;
+    }
+
+    #s .closed,
+    #t .closed {
+        fill: $closed_primary;
+    }
+
+    // This gives a sbutle outline around the board
+    #d .closed {
+        fill: $closed_secondary;
+    }
+    #bull.closed {
+        .dark, { fill: $closed_primary; }
+        .light { fill: $closed_secondary; }
+    }
+}

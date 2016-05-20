@@ -1,4 +1,10 @@
 $(function() {
+    // @todo: Must save state to local storage
+    // @todo: click on the board itself
+    // @todo: responsive for horizontal after SCSS
+    // @todo: figure out why it's slow and why there is no top padding
+    // @todo: add transitions or animations to smooth it all out
+
     var numbers_list = $('<ul>').addClass('numbers_list'),
         i = 21,
         all_numbers = [],
@@ -55,17 +61,33 @@ $(function() {
      * @param open
      */
     function update_target(target, open) {
-        var el;
-        if (21 === target) {
-            el = $('#bull');
-        } else {
-            el = $('#s' + target + ', #d' + target + ', #t' + target);
-        }
+        var el = find_on_target(target);
+        //if (21 === target) {
+        //    el = $('#bull');
+        //} else {
+        //    el = $('#s' + target + ', #d' + target + ', #t' + target);
+        //}
 
         if (open) {
             el.removeClass('closed');
         } else {
             el.addClass('closed');
         }
+    }
+
+
+    /**
+     * Finds the row on the slice on the board SVG and returns the element.
+     *
+     * @param num
+     */
+    function find_on_target(num) {
+        var el;
+        if (21 === num) {
+            el = $('#bull');
+        } else {
+            el = $('#s' + num + ', #d' + num + ', #t' + num);
+        }
+        return el;
     }
 });
