@@ -20,7 +20,8 @@ html { height: 100%; }
 body { font-family: Arial; height: 100%; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 @media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 10%; } }
 
-.dartboard_container { width: 100%; margin: 4% auto; text-align: center; max-height: 60%; }
+.dartboard_container { position: relative; width: 100%; margin: 4% auto; text-align: center; max-height: 60%; }
+.dartboard_container button.reset { position: absolute; top: 4%; left: 2%; }
 
 h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
 

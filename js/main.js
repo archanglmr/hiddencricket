@@ -9,6 +9,7 @@ $(function() {
         numbers_list = $('<ul>').addClass('numbers_list'),
         dartboard_container = $('<section>').addClass('dartboard_container'),
 
+        button_reset = $('<button>').text('+').addClass('reset'),
         dartboard = false,
         sectors = {},
         i, li;
@@ -20,8 +21,9 @@ $(function() {
             alert("Couldn't load dart board :(");
         })
         .done(function(data) {
-            dartboard_container.append(data);
-            dartboard = dartboard_container.first();
+            dartboard_container.append(data)
+                .append(button_reset);
+            dartboard = dartboard_container.find('svg');
 
             // this is in the reverse order because we want the bull and large
             // number listed first.
@@ -39,6 +41,16 @@ $(function() {
             // set observers
             dartboard.click(click_sector);
             numbers_list.click(click_sector);
+            button_reset.click(function(event) {
+                var i;
+                if (confirm("Are you sure you'd like to start a new game?")) {
+                    for (i in sectors) {
+                        if (sectors.hasOwnProperty(i)) {
+                            sectors[i].open();
+                        }
+                    }
+                }
+            });
 
             body.append(
                 dartboard_container,

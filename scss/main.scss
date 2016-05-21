@@ -34,10 +34,17 @@ body {
 
 
 .dartboard_container {
+    position: relative;
     width: 100%;
     margin: 4% auto;
     text-align: center;
     max-height: 60%;
+
+    button.reset {
+        position: absolute;
+        top: 4%;
+        left: 2%;
+    }
 }
 
 
