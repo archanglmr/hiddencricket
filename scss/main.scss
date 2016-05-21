@@ -65,7 +65,7 @@ h2 {
 
 /* SVG STYLES AND COLORS */
 
-#dartboard {
+.dartboard {
     width: 100%;
     max-width: 90%;
     height: auto;
@@ -77,36 +77,52 @@ h2 {
         fill: $score_color;
     }
 
-    // Singles
-    #s {
-        .dark { fill: $dark_primary; }
-        .light { fill: $light_primary; }
-    }
+    .sector {
+        &.dark {
+            .single { fill: $dark_primary; }
+            .double { fill: $dark_secondary; }
+            .triple { fill: $dark_secondary; }
+        }
+        &.light {
+            .single { fill: $light_primary; }
+            .double { fill: $light_secondary; }
+            .triple { fill: $light_secondary; }
+        }
 
-    // doubles
-    #d, #t, #bull {
+        &.closed {
+            opacity: $closed_opacity;
+            .single { fill: $closed_primary; }
+            .double { fill: $closed_secondary; }
+            .triple { fill: $closed_primary; }
+        }
+    }
+    .sector_bull {
         .dark { fill: $dark_secondary; }
         .light { fill: $light_secondary; }
+        &.closed {
+            .dark, { fill: $closed_primary; }
+            .light { fill: $closed_secondary; }
+        }
     }
 
     /**
         Closed Styles
     **/
-    .closed {
-        opacity: $closed_opacity;
-    }
-
-    #s .closed,
-    #t .closed {
-        fill: $closed_primary;
-    }
+    //.closed {
+    //    opacity: $closed_opacity;
+    //}
+    //
+    //#s .closed,
+    //#t .closed {
+    //    fill: $closed_primary;
+    //}
 
     // This gives a sbutle outline around the board
-    #d .closed {
-        fill: $closed_secondary;
-    }
-    #bull.closed {
-        .dark, { fill: $closed_primary; }
-        .light { fill: $closed_secondary; }
-    }
+    //#d .closed {
+    //    fill: $closed_secondary;
+    //}
+    //#bull.closed {
+    //    .dark, { fill: $closed_primary; }
+    //    .light { fill: $closed_secondary; }
+    //}
 }

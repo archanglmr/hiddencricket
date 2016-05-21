@@ -6,25 +6,32 @@ $(function() {
     // @todo: add transitions or animations to smooth it all out
 
     var numbers_list = $('<ul>').addClass('numbers_list'),
-        i = 21,
-        all_numbers = [],
+        dartboard = $('#dartboard_container .dartboard'),
+        sectors = {},
+        i,
         li;
 
-    for (i; i > 0; i -= 1) {
+    for (i = 21; i > 0; i -= 1) {
         li = $('<li>')
             .data('open', true)
-            .data('target', i)
-            .addClass('open')
+            //.data('sector', i)
             .click(number_discovered)
             .text(' ' + (i === 21 ? 'Bull' : i) + ' ');
 
-        all_numbers.push(li);
         numbers_list.append(li);
+
+        sectors[i] = (new BoardSector(i))
+            .setButton(li)
+            .setSectorSVG(find_on_dartboard(i));
     }
 
     $('body')
         .append($('<h2>').text('Open Numbers'))
         .append(numbers_list);
+
+    //console.log(sectors);
+
+    // localStorage.setItem(clientId + ':history', JSON.stringify(history));
     //$('html')
     //    .on('touchstart', function(e) {
     //        console.log('touchstart');
@@ -38,35 +45,30 @@ $(function() {
 
     function number_discovered() {
         var li = $(this),
-            target = li.data('target');
+            sector = li.data('sector');
 
         if (li.data('open')) {
             li
                 .data('open', false)
                 .addClass('closed');
-            update_target(target, false);
+            update_sector(sector, false);
         } else {
             li
                 .data('open', true)
                 .removeClass('closed');
-            update_target(target, true);
+            update_sector(sector, true);
         }
     }
 
 
     /**
-     * Finds the row on the slice on the board SVG and colors it accordingly.
+     * Finds the sector on the board SVG and colors it accordingly.
      *
-     * @param target
+     * @param sector
      * @param open
      */
-    function update_target(target, open) {
-        var el = find_on_target(target);
-        //if (21 === target) {
-        //    el = $('#bull');
-        //} else {
-        //    el = $('#s' + target + ', #d' + target + ', #t' + target);
-        //}
+    function update_sector(sector, open) {
+        var el = find_on_dartboard(sector);
 
         if (open) {
             el.removeClass('closed');
@@ -77,17 +79,11 @@ $(function() {
 
 
     /**
-     * Finds the row on the slice on the board SVG and returns the element.
+     * Finds the sector on the board SVG and returns the element.
      *
-     * @param num
+     * @param sector
      */
-    function find_on_target(num) {
-        var el;
-        if (21 === num) {
-            el = $('#bull');
-        } else {
-            el = $('#s' + num + ', #d' + num + ', #t' + num);
-        }
-        return el;
+    function find_on_dartboard(sector) {
+        return dartboard.find('.sector_' + (21 === sector ? 'bull' : sector));
     }
 });
