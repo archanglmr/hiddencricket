@@ -1,12 +1,12 @@
 $(function() {
     "use strict";
-    // @todo: responsive for horizontal after SCSS
     // @todo: figure out why it's slow
     // @todo: add "new game" button
 
     var body = $('body'),
         numbers_list = $('<ul>').addClass('numbers_list'),
         dartboard_container = $('<section>').addClass('dartboard_container'),
+
         dartboard = false,
         sectors = {},
         i, li;

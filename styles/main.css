@@ -18,7 +18,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 html { height: 100%; }
 
 body { font-family: Arial; height: 100%; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
-body.standalone .dartboard_container { margin-top: 10%; }
+@media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 10%; } }
 
 .dartboard_container { width: 100%; margin: 4% auto; text-align: center; max-height: 60%; }
 
@@ -46,3 +46,8 @@ h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
 .dartboard .sector_bull .light { fill: #4F9962; }
 .dartboard .sector_bull.closed .dark { fill: #600; }
 .dartboard .sector_bull.closed .light { fill: #666; }
+
+@media only screen and (orientation: landscape) { h2 { display: none; }
+  .dartboard_container { display: inline-block; vertical-align: top; margin: 1% auto 1% 4%; width: 56%; max-width: 60%; height: 100%; max-height: 100%; }
+  .numbers_list { display: inline-block; vertical-align: top; margin: 1% 4%; height: 100%; width: 32%; }
+  .numbers_list li { margin: 1%; width: 31%; height: 12%; } }
