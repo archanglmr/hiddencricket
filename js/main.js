@@ -1,39 +1,54 @@
 $(function() {
+    "use strict";
     // @todo: Must save state to local storage
     // @todo: responsive for horizontal after SCSS
     // @todo: figure out why it's slow and why there is no top padding
     // @todo: add transitions or animations to smooth it all out
 
-    var numbers_list = $('<ul>').addClass('numbers_list'),
-        dartboard = $('#dartboard_container .dartboard'),
+    var body = $('body'),
+        numbers_list = $('<ul>').addClass('numbers_list'),
+        dartboard_container = $('<sction>').addClass('.dartboard_container'),
+        dartboard = false,
         sectors = {},
-        i,
-        li;
-
-    for (i = 21; i > 0; i -= 1) {
-        li = $('<li>')
-            .text((i === 21 ? 'Bull' : i));
-
-        numbers_list.append(li);
-
-        sectors[i] = (new BoardSector(i))
-            .setButton(li)
-            .setSectorSVG(find_on_dartboard(i));
-    }
+        i, li;
 
 
-    // set observers
-    dartboard.click(click_sector);
-    numbers_list.click(click_sector);
+    // Load the board SVG. Can't really do anything with out it.
+    $.get({url: 'assets/dartboard.svg', dataType: 'text'})
+        .fail(function() {
+            alert("Couldn't load dart board :(");
+        })
+        .done(function(data) {
+            dartboard_container.append(data);
+            dartboard = dartboard_container.first();
 
-    $('body').append(
-        $('<h2>').text('Open Numbers'),
-        numbers_list
-    );
+            // this is in the reverse order because we want the bull and large
+            // number listed first.
+            for (i = 21; i > 0; i -= 1) {
+                li = $('<li>').text((i === 21 ? 'Bull' : i));
 
-    //console.log(sectors);
+                numbers_list.append(li);
 
-    // localStorage.setItem(clientId + ':history', JSON.stringify(history));
+                sectors[i] = (new BoardSector(i))
+                    .setButton(li)
+                    .setSectorSVG(find_on_dartboard(i));
+            }
+
+
+            // set observers
+            dartboard.click(click_sector);
+            numbers_list.click(click_sector);
+
+            body.append(
+                dartboard_container,
+                $('<h2>').text('Open Numbers'),
+                numbers_list
+            );
+        });
+
+    body.addClass(window.navigator.standalone ? 'standalone' : '');
+
+
     //$('html')
     //    .on('touchstart', function(e) {
     //        console.log('touchstart');

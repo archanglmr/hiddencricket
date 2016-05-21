@@ -1,9 +1,13 @@
 /**
  * BoardSector class
  *
+ * @param sector_id
+ * @param board_id
  * @constructor
  */
-function BoardSector(id) {
+function BoardSector(sector_id, board_id) {
+    "use strict";
+    var local_storage_key = (board_id || 'dartboard') + ':' + sector_id;
     var open = true;
 
     var _sector = false;
@@ -24,10 +28,10 @@ function BoardSector(id) {
             _double = _sector.find('double');
             _triple = _sector.find('triple');
 
-            _sector.data('sector', id);
-            _single.data('sector', id);
-            _double.data('sector', id);
-            _triple.data('sector', id);
+            _sector.data('sector', sector_id);
+            _single.data('sector', sector_id);
+            _double.data('sector', sector_id);
+            _triple.data('sector', sector_id);
         }
         update_el(_sector);
 
@@ -38,7 +42,7 @@ function BoardSector(id) {
         _button = el || false;
 
         if (el) {
-            _button.data('sector', id);
+            _button.data('sector', sector_id);
         }
         update_el(_button);
 
@@ -53,6 +57,7 @@ function BoardSector(id) {
         open = true;
         update_el(_sector);
         update_el(_button);
+        localStorage.setItem(local_storage_key, '');
 
         return this;
     };
@@ -61,6 +66,7 @@ function BoardSector(id) {
         open = false;
         update_el(_sector);
         update_el(_button);
+        localStorage.setItem(local_storage_key, 'closed');
 
         return this;
     };
@@ -73,7 +79,11 @@ function BoardSector(id) {
         }
     };
 
+
     // CONSTRUCTOR SETUP
+    if ('closed' === localStorage.getItem(local_storage_key)) {
+        open = false;
+    }
 
 
     // PRIVATE METHODS

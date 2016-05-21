@@ -1,1 +1,47 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}html{height:100%}body{font-family:Arial;height:100%;overflow:hidden;background-color:black;color:#999}#dartboard_container{width:100%;margin:4% auto;text-align:center;max-height:60%}h2{font-size:22px;text-align:center;margin:0;padding:3%;height:4%}.numbers_list{margin:0 1%;height:21%}.numbers_list li{vertical-align:top;display:inline-block;text-align:center;box-sizing:border-box;background-color:#333;margin:1%;padding:0;height:33%;font-size:20px;line-height:2;clear:both;border-radius:5px;width:12%}.numbers_list li.closed{text-decoration:line-through;opacity:.5;background-color:#600}.dartboard{width:100%;max-width:90%;height:auto;max-height:100%}.dartboard #score path{fill:#999}.dartboard .sector.dark .single{fill:#333}.dartboard .sector.dark .double{fill:#ED3737}.dartboard .sector.dark .triple{fill:#ED3737}.dartboard .sector.light .single{fill:#F7E9CD}.dartboard .sector.light .double{fill:#4F9962}.dartboard .sector.light .triple{fill:#4F9962}.dartboard .sector.closed{opacity:.5}.dartboard .sector.closed .single{fill:#600}.dartboard .sector.closed .double{fill:#666}.dartboard .sector.closed .triple{fill:#600}.dartboard .sector_bull .dark{fill:#ED3737}.dartboard .sector_bull .light{fill:#4F9962}.dartboard .sector_bull.closed .dark{fill:#600}.dartboard .sector_bull.closed .light{fill:#666}
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+html { height: 100%; }
+
+body { font-family: Arial; height: 100%; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+body.standalone .dartboard_container { margin-top: 10%; }
+
+.dartboard_container { width: 100%; margin: 4% auto; text-align: center; max-height: 60%; }
+
+h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
+
+.numbers_list { margin: 0 1%; height: 21%; /* this is really taking 6% more due to the 1% top/bottom margin on the <li> */ }
+.numbers_list li { vertical-align: top; display: inline-block; text-align: center; box-sizing: border-box; background-color: #333; margin: 1%; padding: 0; height: 33%; font-size: 20px; line-height: 2; clear: both; border-radius: 5px; width: 12%; }
+.numbers_list li.closed { text-decoration: line-through; opacity: 0.5; background-color: #600; }
+
+/* SVG STYLES AND COLORS */
+.dartboard { width: 100%; max-width: 95%; height: auto; max-height: 100%; }
+.dartboard .score path { fill: #999; }
+.dartboard .sector.dark .single { fill: #333; }
+.dartboard .sector.dark .double { fill: #ED3737; }
+.dartboard .sector.dark .triple { fill: #ED3737; }
+.dartboard .sector.light .single { fill: #F7E9CD; }
+.dartboard .sector.light .double { fill: #4F9962; }
+.dartboard .sector.light .triple { fill: #4F9962; }
+.dartboard .sector.closed { opacity: 0.5; }
+.dartboard .sector.closed .single { fill: #600; }
+.dartboard .sector.closed .double { fill: #666; }
+.dartboard .sector.closed .triple { fill: #600; }
+.dartboard .sector_bull .dark { fill: #ED3737; }
+.dartboard .sector_bull .light { fill: #4F9962; }
+.dartboard .sector_bull.closed .dark { fill: #600; }
+.dartboard .sector_bull.closed .light { fill: #666; }

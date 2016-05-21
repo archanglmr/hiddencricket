@@ -1,9 +1,9 @@
 @charset "utf-8";
 
+@import "compass/css3/user-interface";
+
 @import "reset";
 @import "colors";
-
-
 
 html {
     height: 100%;
@@ -14,10 +14,19 @@ body {
     overflow: hidden;
     background-color: black;
     color: $text_color;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    @include user-select(none);
+
+    &.standalone {
+        .dartboard_container {
+            margin-top: 10%;
+        }
+    }
 }
 
 
-#dartboard_container {
+.dartboard_container {
     width: 100%;
     margin: 4% auto;
     text-align: center;
@@ -67,13 +76,13 @@ h2 {
 
 .dartboard {
     width: 100%;
-    max-width: 90%;
+    max-width: 95%;
     height: auto;
     max-height: 100%;
 
 
     // Numbers on the outside
-    #score path {
+    .score path {
         fill: $score_color;
     }
 
@@ -104,25 +113,4 @@ h2 {
             .light { fill: $closed_secondary; }
         }
     }
-
-    /**
-        Closed Styles
-    **/
-    //.closed {
-    //    opacity: $closed_opacity;
-    //}
-    //
-    //#s .closed,
-    //#t .closed {
-    //    fill: $closed_primary;
-    //}
-
-    // This gives a sbutle outline around the board
-    //#d .closed {
-    //    fill: $closed_secondary;
-    //}
-    //#bull.closed {
-    //    .dark, { fill: $closed_primary; }
-    //    .light { fill: $closed_secondary; }
-    //}
 }
