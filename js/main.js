@@ -1,13 +1,12 @@
 $(function() {
     "use strict";
-    // @todo: Must save state to local storage
     // @todo: responsive for horizontal after SCSS
-    // @todo: figure out why it's slow and why there is no top padding
-    // @todo: add transitions or animations to smooth it all out
+    // @todo: figure out why it's slow
+    // @todo: add "new game" button
 
     var body = $('body'),
         numbers_list = $('<ul>').addClass('numbers_list'),
-        dartboard_container = $('<sction>').addClass('.dartboard_container'),
+        dartboard_container = $('<section>').addClass('dartboard_container'),
         dartboard = false,
         sectors = {},
         i, li;
