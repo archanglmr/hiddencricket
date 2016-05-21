@@ -1,7 +1,9 @@
 $(function() {
     "use strict";
-    // @todo: figure out why it's slow
+    // @todo: figure out why it's slow as "standalone" on iphone
     // @todo: add "new game" button
+    // @todo: fix button fonts (vertical alignment)
+    // @todo: fix SVG numbers
 
     var body = $('body'),
         numbers_list = $('<ul>').addClass('numbers_list'),
@@ -47,6 +49,8 @@ $(function() {
 
     body.addClass(window.navigator.standalone ? 'standalone' : '');
 
+    //document.addEventListener("touchstart", function(){}, true);
+    //$('body').bind('touchend', function() {});
 
     //$('html')
     //    .on('touchstart', function(e) {
@@ -59,10 +63,10 @@ $(function() {
     /**
      * Event handler for the board and list of numbers
      *
-     * @param e Event
+     * @param event
      */
-    function click_sector(e) {
-        var el = $(e.target),
+    function click_sector(event) {
+        var el = $(event.target),
             sector = false;
 
         if (!(sector = el.data('sector'))) {
@@ -72,6 +76,7 @@ $(function() {
         if (sector && sectors[sector]) {
             sectors[sector].toggleOpen();
         }
+
     }
 
 
