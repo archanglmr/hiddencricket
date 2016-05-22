@@ -96,10 +96,6 @@ h2 {
 
 
     // Numbers on the outside
-    .score path {
-        fill: $score_color;
-    }
-
     .sector {
         @include single-transition(all, $transition-duration, ease-in-out);
         &.dark {
@@ -119,6 +115,8 @@ h2 {
             .double { fill: $closed_secondary; }
             .triple { fill: $closed_primary; }
         }
+
+        .score { fill: $score_color; }
     }
     .sector_bull {
         .dark { fill: $dark_secondary; }

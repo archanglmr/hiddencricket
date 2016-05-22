@@ -31,7 +31,6 @@ h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
 
 /* SVG STYLES AND COLORS */
 .dartboard { width: 100%; max-width: 95%; height: auto; max-height: 100%; }
-.dartboard .score path { fill: #999; }
 .dartboard .sector { -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 .dartboard .sector.dark .single { fill: #333; }
 .dartboard .sector.dark .double { fill: #ED3737; }
@@ -43,6 +42,7 @@ h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
 .dartboard .sector.closed .single { fill: #600; }
 .dartboard .sector.closed .double { fill: #666; }
 .dartboard .sector.closed .triple { fill: #600; }
+.dartboard .sector .score { fill: #999; }
 .dartboard .sector_bull .dark { fill: #ED3737; }
 .dartboard .sector_bull .light { fill: #4F9962; }
 .dartboard .sector_bull.closed .dark { fill: #600; }
