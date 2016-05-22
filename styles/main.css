@@ -20,17 +20,17 @@ html { height: 100%; }
 body { font-family: Arial; height: 100%; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 @media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 10%; } }
 
-.dartboard_container { position: relative; width: 100%; margin: 4% auto; text-align: center; max-height: 60%; }
+.dartboard_container { position: relative; width: 96%; margin: 4% 2; text-align: center; max-height: 60%; }
 .dartboard_container button.reset { position: absolute; top: 4%; left: 2%; }
 
 h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
 
 .numbers_list { margin: 0 1%; height: 21%; /* this is really taking 6% more due to the 1% top/bottom margin on the <li> */ }
-.numbers_list li { vertical-align: top; display: inline-block; text-align: center; box-sizing: border-box; background-color: #333; margin: 1%; padding: 0; height: 33%; font-size: 20px; line-height: 2; clear: both; border-radius: 5px; width: 12%; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.numbers_list li { vertical-align: top; display: inline-block; text-align: center; background-color: #333; margin: 1%; padding: 0; height: 33%; font-size: 20px; clear: both; -moz-border-radius: 10%; -webkit-border-radius: 10%; border-radius: 10%; width: 12%; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 .numbers_list li.closed { text-decoration: line-through; opacity: 0.5; background-color: #600; }
 
 /* SVG STYLES AND COLORS */
-.dartboard { width: 100%; max-width: 95%; height: auto; max-height: 100%; }
+.dartboard { width: 100%; max-width: 100%; height: auto; max-height: 100%; }
 .dartboard .sector { -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 .dartboard .sector.dark .single { fill: #333; }
 .dartboard .sector.dark .double { fill: #ED3737; }

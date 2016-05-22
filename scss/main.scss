@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-@import "compass/css3/user-interface";
-@import "compass/css3/transition";
+@import "compass/css3";
 
 @import "reset";
 @import "colors";
@@ -35,8 +34,8 @@ body {
 
 .dartboard_container {
     position: relative;
-    width: 100%;
-    margin: 4% auto;
+    width: 96%;
+    margin: 4% 2%;
     text-align: center;
     max-height: 60%;
 
@@ -63,15 +62,13 @@ h2 {
         vertical-align: top;
         display: inline-block;
         text-align: center;
-        box-sizing: border-box;
         background-color: $dark_primary;
         margin: 1%;
         padding: 0;
         height: 33%;
         font-size: 20px;
-        line-height: 2;
         clear: both;
-        border-radius: 5px;
+        @include border-radius(10%);
 
         width: 12%;
 
@@ -90,7 +87,7 @@ h2 {
 /* SVG STYLES AND COLORS */
 .dartboard {
     width: 100%;
-    max-width: 95%;
+    max-width: 100%;
     height: auto;
     max-height: 100%;
 
