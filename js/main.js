@@ -1,7 +1,6 @@
 $(function() {
     "use strict";
     // @todo: figure out why it's slow as "standalone" on iphone
-    // @todo: cleanup "new game" button
     // @todo: fix button size (near square)
     // @todo: fix SVG numbers (use fonts)
 
@@ -12,7 +11,9 @@ $(function() {
         button_reset = $('<button>').addClass('reset').append('<i class="fa fa-angle-left"></i>'), // using font-awesome left angle here
         dartboard = false,
         sectors = {},
-        i, li;
+        i, li,
+
+        menu = new Menu('Menu');
 
 
     // Load the board SVG. Can't really do anything with out it.
@@ -41,25 +42,34 @@ $(function() {
             // set observers
             dartboard.click(click_sector);
             numbers_list.click(click_sector);
-            button_reset.click(function(event) {
-                var i;
-                if (confirm("Are you sure you'd like to start a new game?")) {
-                    for (i in sectors) {
-                        if (sectors.hasOwnProperty(i)) {
-                            sectors[i].open();
-                        }
-                    }
-                }
+            button_reset.click(function() {
+                menu.show();
             });
 
             body.append(
                 dartboard_container,
-                $('<h2>').text('Open Numbers'),
-                numbers_list
+                $('<h2>').addClass('numbers').text('Open Numbers'),
+                numbers_list,
+                menu.getElement()
             );
         });
 
     body.addClass(window.navigator.standalone ? 'standalone' : '');
+
+    menu.addButton('New Game', function() {
+        var i;
+        for (i in sectors) {
+            if (sectors.hasOwnProperty(i)) {
+                sectors[i].open();
+            }
+        }
+        menu.hide();
+    });
+    menu.addButton('Continue', function() {
+        menu.hide();
+    });
+    //menu.addButton('What is this?');
+
 
     //document.addEventListener("touchstart", function(){}, true);
     //$('body').bind('touchend', function() {});

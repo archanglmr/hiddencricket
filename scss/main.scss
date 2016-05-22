@@ -4,11 +4,12 @@
 @import "compass/css3";
 
 @import "colors";
+@import "config";
 
-$transition-duration: 100ms;
+@import "menu";
 
 
-//html {}
+
 body {
     font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif;
     font-weight: 300;
@@ -28,6 +29,9 @@ body {
             }
         }
     }
+}
+* {
+    font-weight: 300;
 }
 
 
@@ -54,7 +58,7 @@ button.reset {
 }
 
 
-h2 { // 6%h
+h2.numbers { // 6%h
     font-size: 4vh;
     line-height: 4vh;
     vertical-align: middle;
@@ -134,7 +138,7 @@ h2 { // 6%h
 
 
 @media only screen and (orientation: landscape) {
-    h2 {
+    h2.numbers {
         display: none;
     }
 
