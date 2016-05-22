@@ -15,16 +15,17 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; height: 100vh; width: 100vw; overflow: hidden; background-color: #000; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; font-weight: 300; height: 100vh; width: 100vw; overflow: hidden; background-color: #000; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 @media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 5vh; } }
 
-.dartboard_container { position: relative; width: 96vw; margin: 4vh 2vw; text-align: center; max-height: 52vh; }
-.dartboard_container button.reset { position: absolute; top: 0; left: 0; }
+button.reset { position: absolute; top: 3vh; left: 3vw; background-color: transparent; border: none; color: #666; font-size: 10vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 2vw 0 0; }
+
+.dartboard_container { width: 96vw; margin: 4vh 2vw; text-align: center; max-height: 52vh; }
 
 h2 { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: center; margin: 0; padding: 0 2vw 2vh 2vw; }
 
 .numbers_list { margin: 0 1vw; }
-.numbers_list li { display: inline-block; background-color: #333; margin: 1vw; padding: 0; width: 12vw; height: 12vw; line-height: 12vw; text-align: center; vertical-align: middle; font-size: 5vmin; font-weight: bold; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.numbers_list li { display: inline-block; background-color: #333; margin: 1vw; padding: 0; width: 12vw; height: 12vw; line-height: 12vw; text-align: center; vertical-align: middle; font-size: 5vmin; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 .numbers_list li.closed { text-decoration: line-through; color: rgba(102, 102, 102, 0.5); background-color: rgba(102, 0, 0, 0.5); }
 
 /* SVG STYLES AND COLORS */
@@ -33,13 +34,13 @@ h2 { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: cente
 .dartboard .sector.dark .single { fill: #333; }
 .dartboard .sector.dark .double { fill: #ED3737; }
 .dartboard .sector.dark .triple { fill: #ED3737; }
-.dartboard .sector.light .single { fill: #F7E9CD; }
+.dartboard .sector.light .single { fill: #e5d8be; }
 .dartboard .sector.light .double { fill: #4F9962; }
 .dartboard .sector.light .triple { fill: #4F9962; }
 .dartboard .sector.closed .single { fill: rgba(102, 0, 0, 0.5); }
 .dartboard .sector.closed .double { fill: rgba(102, 102, 102, 0.5); }
 .dartboard .sector.closed .triple { fill: rgba(102, 0, 0, 0.5); }
-.dartboard .sector.closed .score { fill: rgba(102, 102, 102, 0.5); }
+.dartboard .sector.closed .score { fill: rgba(102, 0, 0, 0.5); }
 .dartboard .sector .score { fill: #999; }
 .dartboard .sector_bull .dark { fill: #ED3737; }
 .dartboard .sector_bull .light { fill: #4F9962; }

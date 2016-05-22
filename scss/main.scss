@@ -11,6 +11,7 @@ $transition-duration: 100ms;
 //html {}
 body {
     font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif;
+    font-weight: 300;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -30,18 +31,26 @@ body {
 }
 
 
+button.reset {
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+    background-color: transparent;
+    border: none;
+    color: #666;
+    font-size: 10vmin;
+    font-weight: 200;
+    line-height: 10vmin;
+    margin: 0;
+    padding: 0 2vw 0 0;
+}
+
+
 .dartboard_container { // 60%h
-    position: relative;
     width: 96vw;
     margin: 4vh 2vw;
     text-align: center;
     max-height: 52vh;
-
-    button.reset {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
 }
 
 
@@ -67,7 +76,7 @@ h2 { // 6%h
         text-align: center;
         vertical-align: middle;
         font-size: 5vmin; // used width because button can be tall and narrow
-        font-weight: bold;
+        //font-weight: bold;
         @include border-radius(2vmin);
         @include single-transition(all, $transition-duration, ease-in-out);
 
@@ -89,7 +98,6 @@ h2 { // 6%h
     max-height: 100%;
 
 
-    // Numbers on the outside
     .sector {
         @include single-transition(all, $transition-duration, ease-in-out);
         &.dark {
@@ -107,7 +115,7 @@ h2 { // 6%h
             .single { fill: $closed_primary; }
             .double { fill: $closed_secondary; }
             .triple { fill: $closed_primary; }
-            .score { fill: $closed_secondary; }
+            .score { fill: $closed_primary; }
         }
 
         .score { fill: $score_color; }

@@ -9,7 +9,7 @@ $(function() {
         numbers_list = $('<ul>').addClass('numbers_list'),
         dartboard_container = $('<section>').addClass('dartboard_container'),
 
-        button_reset = $('<button>').text('+').addClass('reset'),
+        button_reset = $('<button>').addClass('reset').append('<i class="fa fa-angle-left"></i>'), // using font-awesome left angle here
         dartboard = false,
         sectors = {},
         i, li;
