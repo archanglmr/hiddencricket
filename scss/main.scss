@@ -8,13 +8,11 @@
 $transition-duration: 100ms;
 
 
-html {
-    height: 100%;
-
-}
+//html {}
 body {
     font-family: Arial;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     background-color: black;
     color: $text_color;
@@ -25,52 +23,55 @@ body {
     @media only screen and (orientation: portrait) {
         &.standalone {
             .dartboard_container {
-                margin-top: 10%;
+                margin-top: 5vh;
             }
         }
     }
 }
 
 
-.dartboard_container {
+.dartboard_container { // 60%h
     position: relative;
-    width: 96%;
-    margin: 4% 2%;
+    width: 96vw;
+    margin: 4vh 2vw;
     text-align: center;
-    max-height: 60%;
+    max-height: 52vh;
 
     button.reset {
         position: absolute;
-        top: 4%;
-        left: 2%;
+        top: 0;
+        left: 0;
     }
 }
 
 
-h2 {
-    font-size: 22px;
+h2 { // 6%h
+    font-size: 4vh;
+    line-height: 4vh;
+    vertical-align: middle;
     text-align: center;
     margin: 0;
-    padding: 3%;
-    height: 4%;
+    padding: 0 2vw 2vh 2vw;
 }
-.numbers_list {
-    margin: 0 1%;
-    height: 21%; /* this is really taking 6% more due to the 1% top/bottom margin on the <li> */
+.numbers_list { // 30%h
+    margin: 0 1vw;
 
     li {
-        vertical-align: top;
         display: inline-block;
-        text-align: center;
         background-color: $dark_primary;
-        margin: 1%;
+        margin: 1vh 1vw;
         padding: 0;
-        height: 33%;
-        font-size: 20px;
-        clear: both;
-        @include border-radius(10%);
+        width: 12vw;
+        height: 8vh;
+        line-height: 8vh;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 5vmin; // used width because button can be tall and narrow
+        font-weight: bold;
 
-        width: 12%;
+        @include border-radius(2vh);
+
+
 
         @include single-transition(all, $transition-duration, ease-in-out);
 
@@ -133,29 +134,28 @@ h2 {
         display: none;
     }
 
-    .dartboard_container {
+    .dartboard_container { //60%w
         display: inline-block;
         vertical-align: top;
 
-        margin: 1% auto 1% 4%;
-        width: 56%;
-        max-width: 60%;
-        height: 100%;
-        max-height: 100%;
+        margin: 1vh 2vw 1vh 2vw;
+        width: 56vw;
+        max-width: 56vw;
+        height: 100vh;
+        max-height: 100vh;
     }
 
-    .numbers_list {
+    .numbers_list { // 40%w
         display: inline-block;
         vertical-align: top;
 
-        margin: 1% 4%;
-        height: 100%;
-        width: 32%;
+        margin: 1vh 2vw 1vh 2vh;
+        width: 36vw;
 
         li {
-            margin: 1%;
-            width: 31%;
-            height: 12%;
+            width: 10vw;
+            height: 12vh;
+            line-height: 12vh;
         }
     }
 }

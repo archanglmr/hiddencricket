@@ -15,18 +15,16 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-html { height: 100%; }
+body { font-family: Arial; height: 100vh; width: 100vw; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+@media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 5vh; } }
 
-body { font-family: Arial; height: 100%; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
-@media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 10%; } }
+.dartboard_container { position: relative; width: 96vw; margin: 4vh 2vw; text-align: center; max-height: 52vh; }
+.dartboard_container button.reset { position: absolute; top: 0; left: 0; }
 
-.dartboard_container { position: relative; width: 96%; margin: 4% 2; text-align: center; max-height: 60%; }
-.dartboard_container button.reset { position: absolute; top: 4%; left: 2%; }
+h2 { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: center; margin: 0; padding: 0 2vw 2vh 2vw; }
 
-h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
-
-.numbers_list { margin: 0 1%; height: 21%; /* this is really taking 6% more due to the 1% top/bottom margin on the <li> */ }
-.numbers_list li { vertical-align: top; display: inline-block; text-align: center; background-color: #333; margin: 1%; padding: 0; height: 33%; font-size: 20px; clear: both; -moz-border-radius: 10%; -webkit-border-radius: 10%; border-radius: 10%; width: 12%; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.numbers_list { margin: 0 1vw; }
+.numbers_list li { display: inline-block; background-color: #333; margin: 1vh 1vw; padding: 0; width: 12vw; height: 8vh; line-height: 8vh; text-align: center; vertical-align: middle; font-size: 5vmin; font-weight: bold; -moz-border-radius: 2vh; -webkit-border-radius: 2vh; border-radius: 2vh; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 .numbers_list li.closed { text-decoration: line-through; opacity: 0.5; background-color: #600; }
 
 /* SVG STYLES AND COLORS */
@@ -49,6 +47,6 @@ h2 { font-size: 22px; text-align: center; margin: 0; padding: 3%; height: 4%; }
 .dartboard .sector_bull.closed .light { fill: #666; }
 
 @media only screen and (orientation: landscape) { h2 { display: none; }
-  .dartboard_container { display: inline-block; vertical-align: top; margin: 1% auto 1% 4%; width: 56%; max-width: 60%; height: 100%; max-height: 100%; }
-  .numbers_list { display: inline-block; vertical-align: top; margin: 1% 4%; height: 100%; width: 32%; }
-  .numbers_list li { margin: 1%; width: 31%; height: 12%; } }
+  .dartboard_container { display: inline-block; vertical-align: top; margin: 1vh 2vw 1vh 2vw; width: 56vw; max-width: 56vw; height: 100vh; max-height: 100vh; }
+  .numbers_list { display: inline-block; vertical-align: top; margin: 1vh 2vw 1vh 2vh; width: 36vw; }
+  .numbers_list li { width: 10vw; height: 12vh; line-height: 12vh; } }
