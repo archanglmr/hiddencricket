@@ -1,0 +1,42 @@
+@import "colors";
+@import "config";
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: $app_background_color;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    opacity: 0;
+    @include single-transition(all, ($transition-duration * 2), ease-in-out);
+
+    &.visible {
+        left: 0;
+        opacity: 1;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10vh 2vw 4vh 2vw;
+        font-size: 6vh;
+    }
+    button {
+        margin: 0 2vw 2vw 2vw;
+        padding: 0;
+        width: 96vw;
+        height: 15vh;
+        border: none;
+
+        line-height: 15vh;
+        vertical-align: middle;
+        font-size: 5vh;
+        color: $text_color;
+        background-color: $dark_primary;
+        @include border-radius(2vmin);
+        @include single-transition(all, $transition-duration, ease-in-out);
+    }
+}
