@@ -1,8 +1,8 @@
 @charset "utf-8";
 
+@import "compass/reset";
 @import "compass/css3";
 
-@import "reset";
 @import "colors";
 
 $transition-duration: 100ms;
@@ -14,7 +14,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-color: black;
+    background-color: $app_background_color;
     color: $text_color;
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -68,16 +68,12 @@ h2 { // 6%h
         vertical-align: middle;
         font-size: 5vmin; // used width because button can be tall and narrow
         font-weight: bold;
-
         @include border-radius(2vmin);
-
-
-
         @include single-transition(all, $transition-duration, ease-in-out);
 
         &.closed {
             text-decoration: line-through;
-            opacity: $closed_opacity;
+            color: $closed_secondary;
             background-color: $closed_primary;
         }
     }
@@ -108,10 +104,10 @@ h2 { // 6%h
         }
 
         &.closed {
-            opacity: $closed_opacity;
             .single { fill: $closed_primary; }
             .double { fill: $closed_secondary; }
             .triple { fill: $closed_primary; }
+            .score { fill: $closed_secondary; }
         }
 
         .score { fill: $score_color; }

@@ -1,9 +1,9 @@
 $(function() {
     "use strict";
     // @todo: figure out why it's slow as "standalone" on iphone
-    // @todo: add "new game" button
-    // @todo: fix button fonts (vertical alignment)
-    // @todo: fix SVG numbers
+    // @todo: cleanup "new game" button
+    // @todo: fix button size (near square)
+    // @todo: fix SVG numbers (use fonts)
 
     var body = $('body'),
         numbers_list = $('<ul>').addClass('numbers_list'),

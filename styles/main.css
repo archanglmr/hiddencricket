@@ -1,21 +1,21 @@
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-
-body { line-height: 1; }
+html { line-height: 1; }
 
 ol, ul { list-style: none; }
 
-blockquote, q { quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-
 table { border-collapse: collapse; border-spacing: 0; }
 
-body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; height: 100vh; width: 100vw; overflow: hidden; background-color: black; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; height: 100vh; width: 100vw; overflow: hidden; background-color: #000; color: #999; -webkit-tap-highlight-color: transparent; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 @media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 5vh; } }
 
 .dartboard_container { position: relative; width: 96vw; margin: 4vh 2vw; text-align: center; max-height: 52vh; }
@@ -25,7 +25,7 @@ h2 { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: cente
 
 .numbers_list { margin: 0 1vw; }
 .numbers_list li { display: inline-block; background-color: #333; margin: 1vw; padding: 0; width: 12vw; height: 12vw; line-height: 12vw; text-align: center; vertical-align: middle; font-size: 5vmin; font-weight: bold; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
-.numbers_list li.closed { text-decoration: line-through; opacity: 0.5; background-color: #600; }
+.numbers_list li.closed { text-decoration: line-through; color: rgba(102, 102, 102, 0.5); background-color: rgba(102, 0, 0, 0.5); }
 
 /* SVG STYLES AND COLORS */
 .dartboard { width: 100%; max-width: 100%; height: auto; max-height: 100%; }
@@ -36,15 +36,15 @@ h2 { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: cente
 .dartboard .sector.light .single { fill: #F7E9CD; }
 .dartboard .sector.light .double { fill: #4F9962; }
 .dartboard .sector.light .triple { fill: #4F9962; }
-.dartboard .sector.closed { opacity: 0.5; }
-.dartboard .sector.closed .single { fill: #600; }
-.dartboard .sector.closed .double { fill: #666; }
-.dartboard .sector.closed .triple { fill: #600; }
+.dartboard .sector.closed .single { fill: rgba(102, 0, 0, 0.5); }
+.dartboard .sector.closed .double { fill: rgba(102, 102, 102, 0.5); }
+.dartboard .sector.closed .triple { fill: rgba(102, 0, 0, 0.5); }
+.dartboard .sector.closed .score { fill: rgba(102, 102, 102, 0.5); }
 .dartboard .sector .score { fill: #999; }
 .dartboard .sector_bull .dark { fill: #ED3737; }
 .dartboard .sector_bull .light { fill: #4F9962; }
-.dartboard .sector_bull.closed .dark { fill: #600; }
-.dartboard .sector_bull.closed .light { fill: #666; }
+.dartboard .sector_bull.closed .dark { fill: rgba(102, 0, 0, 0.5); }
+.dartboard .sector_bull.closed .light { fill: rgba(102, 102, 102, 0.5); }
 
 @media only screen and (orientation: landscape) { h2 { display: none; }
   .dartboard_container { display: inline-block; vertical-align: top; margin: 1vh 2vw 1vh 2vw; width: 56vw; max-width: 56vw; height: 100vh; max-height: 100vh; }

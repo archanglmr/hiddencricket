@@ -1,10 +1,9 @@
+$app_background_color: #000;
 $text_color: #999;
 
 
-$closed_primary: #111;
-$closed_primary: #600;
-$closed_secondary: #666;
-$closed_opacity: .5;
+$closed_primary: rgba(102, 0, 0, .5); // #600
+$closed_secondary: rgba(102, 102, 102, .5); //#666
 
 $score_color: #999;
 $dark_primary: #333;
