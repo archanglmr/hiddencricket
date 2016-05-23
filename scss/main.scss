@@ -67,6 +67,7 @@ h2.numbers { // 6%h
 }
 .numbers_list { // 30%h
     margin: 0 1vw;
+    padding: 0;
 
     button {
         border: none;
@@ -147,21 +148,21 @@ h2.numbers { // 6%h
         display: inline-block;
         vertical-align: top;
 
-        margin: 1vh 2vw 1vh 2vw;
+        margin: 1vh 2vw;
         width: 56vw;
         max-width: 56vw;
-        height: 100vh;
-        max-height: 100vh;
+        height: 98vh;
+        max-height: 98vh;
     }
 
     .numbers_list { // 40%w
         display: inline-block;
         vertical-align: top;
 
-        margin: 1vh 2vw 1vh 2vh;
+        margin: 1vh 2vw;
         width: 36vw;
 
-        li {
+        button {
             margin: 1vh;
             width: 10vw;
             height: 12vh;

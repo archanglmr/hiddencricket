@@ -31,7 +31,7 @@ button.reset { position: absolute; top: 3vh; left: 3vw; background-color: transp
 
 h2.numbers { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: center; margin: 0; padding: 0 2vw 2vh 2vw; }
 
-.numbers_list { margin: 0 1vw; }
+.numbers_list { margin: 0 1vw; padding: 0; }
 .numbers_list button { border: none; color: #999; display: inline-block; background-color: #333; margin: 1vw; padding: 0; width: 12vw; height: 12vw; line-height: 12vw; text-align: center; vertical-align: middle; font-size: 5vmin; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 .numbers_list button.closed { text-decoration: line-through; color: rgba(102, 102, 102, 0.5); background-color: rgba(102, 0, 0, 0.5); }
 
@@ -55,6 +55,6 @@ h2.numbers { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-alig
 .dartboard .sector_bull.closed .light { fill: rgba(102, 102, 102, 0.5); }
 
 @media only screen and (orientation: landscape) { h2.numbers { display: none; }
-  .dartboard_container { display: inline-block; vertical-align: top; margin: 1vh 2vw 1vh 2vw; width: 56vw; max-width: 56vw; height: 100vh; max-height: 100vh; }
-  .numbers_list { display: inline-block; vertical-align: top; margin: 1vh 2vw 1vh 2vh; width: 36vw; }
-  .numbers_list li { margin: 1vh; width: 10vw; height: 12vh; line-height: 12vh; } }
+  .dartboard_container { display: inline-block; vertical-align: top; margin: 1vh 2vw; width: 56vw; max-width: 56vw; height: 98vh; max-height: 98vh; }
+  .numbers_list { display: inline-block; vertical-align: top; margin: 1vh 2vw; width: 36vw; }
+  .numbers_list button { margin: 1vh; width: 10vw; height: 12vh; line-height: 12vh; } }
