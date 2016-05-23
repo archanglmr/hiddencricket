@@ -23,7 +23,7 @@ function Menu(title) {
 
         button.text(title);
         if (callback) {
-            button.click(callback);
+            button.on(window.navigator.standalone ? 'touchend' : 'click', callback);
         }
 
         el.append(button);

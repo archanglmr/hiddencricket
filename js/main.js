@@ -1,19 +1,19 @@
 $(function() {
     "use strict";
-    // @todo: figure out why it's slow as "standalone" on iphone
     // @todo: fix button size (near square)
     // @todo: fix SVG numbers (use fonts)
 
     var body = $('body'),
-        numbers_list = $('<ul>').addClass('numbers_list'),
+        numbers_list = $('<nav>').addClass('numbers_list'),
         dartboard_container = $('<section>').addClass('dartboard_container'),
 
         button_reset = $('<button>').addClass('reset').append('<i class="fa fa-angle-left"></i>'), // using font-awesome left angle here
         dartboard = false,
         sectors = {},
-        i, li,
 
-        menu = new Menu('Menu');
+        menu = new Menu('Menu'),
+        standalone_mode = !!window.navigator.standalone, // is this in the app/standalone mode?
+        button_press_event = standalone_mode ? 'touchend' : 'click';
 
 
     // Load the board SVG. Can't really do anything with out it.
@@ -22,27 +22,28 @@ $(function() {
             alert("Couldn't load dart board :(");
         })
         .done(function(data) {
-            dartboard_container.append(data)
-                .append(button_reset);
+            var i, button;
+
+            dartboard_container.append(data, button_reset);
             dartboard = dartboard_container.find('svg');
 
             // this is in the reverse order because we want the bull and large
             // number listed first.
             for (i = 21; i > 0; i -= 1) {
-                li = $('<li>').text((i === 21 ? 'Bull' : i));
+                button = $('<button>').text((i === 21 ? 'Bull' : i));
 
-                numbers_list.append(li);
+                numbers_list.append(button);
 
                 sectors[i] = (new BoardSector(i))
-                    .setButton(li)
+                    .setButton(button)
                     .setSectorSVG(find_on_dartboard(i));
             }
 
 
             // set observers
-            dartboard.click(click_sector);
-            numbers_list.click(click_sector);
-            button_reset.click(function() {
+            dartboard.on(button_press_event, click_sector);
+            numbers_list.on(button_press_event, click_sector);
+            button_reset.on(button_press_event, function() {
                 menu.show();
             });
 
@@ -54,7 +55,7 @@ $(function() {
             );
         });
 
-    body.addClass(window.navigator.standalone ? 'standalone' : '');
+    body.addClass(standalone_mode ? 'standalone' : '');
 
     menu.addButton('New Game', function() {
         var i;
@@ -98,7 +99,6 @@ $(function() {
         if (sector && sectors[sector]) {
             sectors[sector].toggleOpen();
         }
-
     }
 
 
