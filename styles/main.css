@@ -15,8 +15,8 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-.menu { width: 100vw; height: 100vh; background-color: #000; margin: 0; padding: 0; position: absolute; top: 0; left: -100vw; opacity: 0; -moz-transition: all 200ms ease-in-out; -o-transition: all 200ms ease-in-out; -webkit-transition: all 200ms ease-in-out; transition: all 200ms ease-in-out; }
-.menu.visible { left: 0; opacity: 1; }
+.menu { width: 100vw; height: 100vh; background-color: #000; margin: 0; padding: 0; position: absolute; top: 0; left: -100vw; -moz-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; -webkit-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; }
+.menu.visible { left: 0; }
 .menu h2 { text-align: center; margin: 10vh 2vw 4vh 2vw; font-size: 6vh; }
 .menu button { margin: 0 2vw 2vw 2vw; padding: 0; width: 96vw; height: 15vh; border: none; line-height: 15vh; vertical-align: middle; font-size: 5vh; color: #999; background-color: #333; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 
