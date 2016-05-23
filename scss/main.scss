@@ -126,8 +126,8 @@ h2.numbers { // 6%h
         .score { fill: $score_color; }
     }
     .sector_bull {
-        .dark { fill: $dark_secondary; }
-        .light { fill: $light_secondary; }
+        .single { fill: $dark_secondary; }
+        .double { fill: $dark_primary; }
         &.closed {
             .dark, { fill: $closed_primary; }
             .light { fill: $closed_secondary; }
