@@ -5,16 +5,43 @@ $text_color: #999;
 $closed_primary: rgba(102, 0, 0, .5); // #600
 $closed_secondary: rgba(102, 102, 102, .5); //#666
 
-$score_color: #999;
+$score_color: $text_color;
 $dark_primary: #333;
 $dark_secondary: #ED3737;
 $light_primary: #e5d8be;
 $light_secondary: #4F9962;
 
 
-$light_primary: #e5d8be;
-
-
 // SIMPLIFIED COLOR SCHEME
 //$dark_primary: $dark_secondary;
 //$light_primary: $light_secondary;
+
+
+
+
+/* earth tones */
+//$text_color: #999;
+//
+//
+//$closed_primary: rgba(102, 0, 0, .5); // #600
+//$closed_secondary: rgba(102, 102, 102, .5); //#666
+//
+//$score_color: $text_color;
+//$dark_primary: #e2be98;
+//$dark_secondary: #772d2d;
+//$light_primary: #f4ead4;
+//$light_secondary: #d35541;
+
+
+
+/* pastel */
+$text_color: #b22911;
+
+$closed_primary: rgba(188, 177, 164, .5); // #bcb1a4
+$closed_secondary: rgba(178, 41, 17, .5); //#b22911
+
+$score_color: $text_color;
+$dark_primary: #bcb1a4;
+$dark_secondary: #db4315;
+$light_primary: #edf4e3;
+$light_secondary: #abe49b;

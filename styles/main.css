@@ -15,12 +15,16 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
+/* earth tones */
+/* pastel */
+/* earth tones */
+/* pastel */
 .menu { width: 100vw; height: 100vh; background-color: #000; margin: 0; padding: 0; position: absolute; top: 0; left: -100vw; -moz-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; -webkit-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; }
 .menu.visible { left: 0; }
 .menu h2 { text-align: center; margin: 10vh 2vw 4vh 2vw; font-size: 6vh; }
-.menu button { margin: 0 2vw 2vw 2vw; padding: 0; width: 96vw; height: 15vh; border: none; line-height: 15vh; vertical-align: middle; font-size: 5vh; color: #999; background-color: #333; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.menu button { margin: 0 2vw 2vw 2vw; padding: 0; width: 96vw; height: 15vh; border: none; line-height: 15vh; vertical-align: middle; font-size: 5vh; color: #b22911; background-color: #bcb1a4; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
 
-body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; font-weight: 300; height: 100vh; width: 100vw; overflow: hidden; background-color: #000; color: #999; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
+body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; font-weight: 300; height: 100vh; width: 100vw; overflow: hidden; background-color: #000; color: #b22911; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 @media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 5vh; } }
 
 *, html { font-weight: 300; }
@@ -32,29 +36,27 @@ button.reset { position: absolute; top: 3vh; left: 3vw; background-color: transp
 h2.numbers { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-align: center; margin: 0; padding: 0 2vw 2vh 2vw; }
 
 .numbers_list { margin: 0 1vw; padding: 0; }
-.numbers_list button { border: none; color: #999; display: inline-block; background-color: #333; margin: 1vw; padding: 0; width: 12vw; height: 9vh; line-height: 9vh; text-align: center; vertical-align: middle; font-size: 5vmin; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
-.numbers_list button.closed { text-decoration: line-through; color: rgba(102, 102, 102, 0.5); background-color: rgba(102, 0, 0, 0.5); }
+.numbers_list button { border: none; color: #b22911; display: inline-block; background-color: #bcb1a4; margin: 1vw; padding: 0; width: 12vw; height: 9vh; line-height: 9vh; text-align: center; vertical-align: middle; font-size: 5vmin; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.numbers_list button.closed { text-decoration: line-through; color: rgba(178, 41, 17, 0.5); background-color: rgba(188, 177, 164, 0.5); }
 
 /* SVG STYLES AND COLORS */
 .dartboard { width: 100%; max-width: 100%; height: auto; max-height: 100%; -webkit-tap-highlight-color: transparent; }
 .dartboard .sector { -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
-.dartboard .sector.dark .single { fill: #333; }
-.dartboard .sector.dark .double { fill: #ED3737; }
-.dartboard .sector.dark .triple { fill: #ED3737; }
-.dartboard .sector.light .single { fill: #e5d8be; }
-.dartboard .sector.light .double { fill: #4F9962; }
-.dartboard .sector.light .triple { fill: #4F9962; }
-.dartboard .sector.closed .single { fill: rgba(102, 0, 0, 0.5); }
-.dartboard .sector.closed .double { fill: rgba(102, 102, 102, 0.5); }
-.dartboard .sector.closed .triple { fill: rgba(102, 0, 0, 0.5); }
-.dartboard .sector.closed .score { fill: rgba(102, 0, 0, 0.5); }
-.dartboard .sector path.score { display: none; }
-.dartboard .sector text.score { font-size: 36px; font-weight: bold; }
-.dartboard .sector .score { fill: #999; }
-.dartboard .sector_bull .single { fill: #ED3737; }
-.dartboard .sector_bull .double { fill: #333; }
-.dartboard .sector_bull.closed .dark { fill: rgba(102, 0, 0, 0.5); }
-.dartboard .sector_bull.closed .light { fill: rgba(102, 102, 102, 0.5); }
+.dartboard .sector.dark .single { fill: #bcb1a4; }
+.dartboard .sector.dark .double { fill: #db4315; }
+.dartboard .sector.dark .triple { fill: #db4315; }
+.dartboard .sector.light .single { fill: #edf4e3; }
+.dartboard .sector.light .double { fill: #abe49b; }
+.dartboard .sector.light .triple { fill: #abe49b; }
+.dartboard .sector.closed .single { fill: rgba(188, 177, 164, 0.5); }
+.dartboard .sector.closed .double { fill: rgba(178, 41, 17, 0.5); }
+.dartboard .sector.closed .triple { fill: rgba(188, 177, 164, 0.5); }
+.dartboard .sector.closed .score { fill: rgba(188, 177, 164, 0.5); }
+.dartboard .sector .score { font-size: 36px; font-weight: bold; fill: #b22911; }
+.dartboard .sector_bull .single { fill: #db4315; }
+.dartboard .sector_bull .double { fill: #bcb1a4; }
+.dartboard .sector_bull.closed .dark { fill: rgba(188, 177, 164, 0.5); }
+.dartboard .sector_bull.closed .light { fill: rgba(178, 41, 17, 0.5); }
 
 @media only screen and (orientation: landscape) { h2.numbers { display: none; }
   .dartboard_container { display: inline-block; vertical-align: top; margin: 1vh 2vw; width: 56vw; max-width: 56vw; height: 98vh; max-height: 98vh; }
