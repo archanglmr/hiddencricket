@@ -11,7 +11,7 @@ $(function() {
         dartboard = false,
         sectors = {},
 
-        menu = new Menu('Menu'),
+        menu = build_menu(),
         standalone_mode = !!window.navigator.standalone, // is this in the app/standalone mode?
         button_press_event = standalone_mode ? 'touchend' : 'click';
 
@@ -57,20 +57,6 @@ $(function() {
 
     body.addClass(standalone_mode ? 'standalone' : '');
 
-    menu.addButton('New Game', function() {
-        var i;
-        for (i in sectors) {
-            if (sectors.hasOwnProperty(i)) {
-                sectors[i].open();
-            }
-        }
-        menu.hide();
-    });
-    menu.addButton('Continue', function() {
-        menu.hide();
-    });
-    //menu.addButton('What is this?');
-
 
     //document.addEventListener("touchstart", function(){}, true);
     //$('body').bind('touchend', function() {});
@@ -81,6 +67,41 @@ $(function() {
     //        e.preventDefault();
     //        return false;
     //    });
+
+
+    /**
+     * Builds the game menu.
+     *
+     * @returns {Menu}
+     */
+    function build_menu() {
+        var menu = new Menu('Menu'),
+            help_button;
+
+        help_button = menu.addButton('Help');
+        help_button
+            .removeClass('button')
+            .addClass('info')
+            .empty()
+            .append('<i class="fa fa-info-circle"></i>'); // using font-awesome info-circle
+
+
+        menu.addButton('New Game', function() {
+            var i;
+            for (i in sectors) {
+                if (sectors.hasOwnProperty(i)) {
+                    sectors[i].open();
+                }
+            }
+            menu.hide();
+        });
+        menu.addButton('Continue', function() {
+            menu.hide();
+        });
+        //menu.addButton('What is this?');
+
+        return menu;
+    }
 
 
     /**

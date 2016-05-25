@@ -23,18 +23,33 @@
         font-size: 6vh;
     }
     button {
-        margin: 0 2vw 2vw 2vw;
-        padding: 0;
-        width: 96vw;
-        height: 15vh;
         border: none;
-
-        line-height: 15vh;
-        vertical-align: middle;
-        font-size: 5vh;
+        padding: 0;
         color: $text_color;
-        background-color: $dark_primary;
-        @include border-radius(2vmin);
+        vertical-align: middle;
         @include single-transition(all, $transition-duration, ease-in-out);
+
+        &.info {
+            position: absolute;
+            top: 3vh;
+            right: 3vw;
+            background-color: transparent;
+            color: $nav_text_color;
+            font-size: 10vmin;
+            font-weight: 200;
+            line-height: 10vmin;
+            margin: 0;
+            padding: 0 0 0 2vw;
+        }
+        &.button {
+            margin: 0 2vw 2vw 2vw;
+            width: 96vw;
+            height: 15vh;
+
+            line-height: 15vh;
+            font-size: 5vh;
+            background-color: $dark_primary;
+            @include border-radius(2vmin);
+        }
     }
 }

@@ -19,7 +19,7 @@ function Menu(title) {
         return this;
     };
     this.addButton = function(title, callback) {
-        var button = $('<button>');
+        var button = $('<button>').addClass('button');
 
         button.text(title);
         if (callback) {

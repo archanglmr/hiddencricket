@@ -1,5 +1,6 @@
 $app_background_color: #000;
 $text_color: #999;
+$nav_text_color: #666;
 
 
 $closed_primary: rgba(102, 0, 0, .5); // #600
@@ -37,8 +38,8 @@ $light_secondary: #4F9962;
 /* pastel */
 $text_color: #b22911;
 
-$closed_primary: rgba(188, 177, 164, .5); // #bcb1a4
-$closed_secondary: rgba(178, 41, 17, .5); //#b22911
+$closed_primary: rgba(188, 177, 164, .25); // #bcb1a4
+$closed_secondary: rgba(178, 41, 17, .25); //#b22911
 
 $score_color: $text_color;
 $dark_primary: #bcb1a4;
