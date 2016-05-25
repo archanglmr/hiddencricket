@@ -48,6 +48,8 @@ h2.numbers { font-size: 4vh; line-height: 4vh; vertical-align: middle; text-alig
 .dartboard .sector.closed .double { fill: rgba(102, 102, 102, 0.5); }
 .dartboard .sector.closed .triple { fill: rgba(102, 0, 0, 0.5); }
 .dartboard .sector.closed .score { fill: rgba(102, 0, 0, 0.5); }
+.dartboard .sector path.score { display: none; }
+.dartboard .sector text.score { font-size: 36px; font-weight: bold; }
 .dartboard .sector .score { fill: #999; }
 .dartboard .sector_bull .single { fill: #ED3737; }
 .dartboard .sector_bull .double { fill: #333; }

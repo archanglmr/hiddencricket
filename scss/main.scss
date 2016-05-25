@@ -123,6 +123,11 @@ h2.numbers { // 6%h
             .score { fill: $closed_primary; }
         }
 
+        path.score { display: none; }
+        text.score {
+            font-size: 36px;
+            font-weight: bold;
+        }
         .score { fill: $score_color; }
     }
     .sector_bull {
