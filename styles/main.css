@@ -19,12 +19,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* pastel */
 /* earth tones */
 /* pastel */
-.menu { width: 100vw; height: 100vh; background-color: #000; margin: 0; padding: 0; position: absolute; top: 0; left: -100vw; -moz-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; -webkit-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; }
-.menu.visible { left: 0; }
-.menu h2 { text-align: center; margin: 10vh 2vw 4vh 2vw; font-size: 6vh; }
-.menu button { border: none; padding: 0; color: #b22911; vertical-align: middle; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
-.menu button.info { position: absolute; top: 3vh; right: 3vw; background-color: transparent; color: #bcb1a4; font-size: 7vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 0 0 2vw; }
-.menu button.button { margin: 0 2vw 2vw 2vw; width: 96vw; height: 15vh; line-height: 15vh; font-size: 5vh; background-color: #bcb1a4; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; }
+section.menu { width: 100vw; height: 100vh; background-color: #000; margin: 0; padding: 0; position: absolute; top: 0; left: -100vw; -moz-transition: left 200ms ease-in-out; -o-transition: left 200ms ease-in-out; -webkit-transition: left 200ms ease-in-out; transition: left 200ms ease-in-out; }
+section.menu.visible { left: 0; }
+section.menu h2 { text-align: center; margin: 10vh 2vw 4vh 2vw; font-size: 6vh; margin-bottom: 30vh; }
+section.menu button { border: none; padding: 0; color: #b22911; vertical-align: middle; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+section.menu button.info { position: absolute; top: 3vh; right: 3vw; background-color: transparent; color: #bcb1a4; font-size: 7vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 0 0 2vw; }
+section.menu button.button { margin: 0 2vw 2vw 2vw; width: 96vw; height: 15vh; line-height: 15vh; font-size: 5vh; background-color: #bcb1a4; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; }
+section.menu button.continue { font-weight: bold; }
 
 /* earth tones */
 /* pastel */
@@ -41,7 +42,7 @@ body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-
 
 *, html { font-weight: 300; }
 
-button.reset { position: absolute; top: 3vh; left: 3vw; background-color: transparent; border: none; color: #bcb1a4; font-size: 10vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 2vw 0 0; }
+button.menu { position: absolute; top: 3vh; left: 3vw; background-color: transparent; border: none; color: #bcb1a4; font-size: 10vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 2vw 0 0; }
 
 .dartboard_container { width: 96vw; margin: 4vh 2vw; text-align: center; max-height: 52vh; }
 

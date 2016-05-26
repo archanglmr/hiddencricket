@@ -7,7 +7,7 @@ $(function() {
         numbers_list = $('<nav>').addClass('numbers_list'),
         dartboard_container = $('<section>').addClass('dartboard_container'),
 
-        button_reset = $('<button>').addClass('reset').append('<i class="fa fa-angle-left"></i>'), // using font-awesome left angle here
+        button_menu = $('<button>').addClass('menu').append('<'), //.append('<i class="fa fa-angle-left"></i>'), // using font-awesome left angle here
         dartboard = false,
         sectors = {},
 
@@ -25,7 +25,7 @@ $(function() {
         .done(function(data) {
             var i, button;
 
-            dartboard_container.append(data, button_reset);
+            dartboard_container.append(data, button_menu);
             dartboard = dartboard_container.find('svg');
 
             // this is in the reverse order because we want the bull and large
@@ -44,7 +44,7 @@ $(function() {
             // set observers
             dartboard.on(button_press_event, click_sector);
             numbers_list.on(button_press_event, click_sector);
-            button_reset.on(button_press_event, function() {
+            button_menu.on(button_press_event, function() {
                 menu.show();
             });
 
@@ -80,9 +80,11 @@ $(function() {
         var help = new InfoPanel();
 
         help.addCloseButton()
+            .addElement('<h2>What is this?</h2>')
+            .addElement('<p>Keeps track of the numbers found in a game of Hidden Cricket (because I have a horrible memory).</p>')
+
             .addElement('<h2>Directions</h2>')
-            //.addElement()
-            .addElement('<p>As players throw at a real life dartboard tap the graphic or number in the list to check it off. What\'s left is a visual and list of undiscovered numbers to aim for.</p>');
+            .addElement('<p>As players throw at a real life dartboard tap the graphic or number in the list to  check it off. What\'s left is a visual of undiscovered numbers to aim for.</p>');
 
         return help;
     }
@@ -93,19 +95,12 @@ $(function() {
      * @returns {Menu}
      */
     function build_menu() {
-        var menu = new Menu('Menu'),
-            help_button;
+        var menu = new Menu('Menu');
 
-        help_button = menu.addButton('Help', function() {
+
+        menu.addButton('What is this?', function() {
             help_panel.show();
         });
-        help_button
-            .removeClass('button')
-            .addClass('info')
-            .empty()
-            .append('<i class="fa fa-info-circle"></i>'); // using font-awesome info-circle
-
-
         menu.addButton('New Game', function() {
             var i;
             for (i in sectors) {
@@ -117,8 +112,7 @@ $(function() {
         });
         menu.addButton('Continue', function() {
             menu.hide();
-        });
-        //menu.addButton('What is this?');
+        }).addClass('continue');
 
         return menu;
     }

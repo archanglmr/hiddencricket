@@ -1,7 +1,7 @@
 @import "colors";
 @import "config";
 
-.menu {
+section.menu {
     width: 100vw;
     height: 100vh;
     background-color: $app_background_color;
@@ -21,6 +21,8 @@
         text-align: center;
         margin: 10vh 2vw 4vh 2vw;
         font-size: 6vh;
+
+        margin-bottom: 30vh;
     }
     button {
         border: none;
@@ -50,6 +52,9 @@
             font-size: 5vh;
             background-color: $dark_primary;
             @include border-radius(2vmin);
+        }
+        &.continue {
+            font-weight: bold;
         }
     }
 }

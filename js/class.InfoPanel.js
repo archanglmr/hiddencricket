@@ -25,7 +25,8 @@ function InfoPanel() {
         if (null === close_button) {
             close_button = $('<button>')
                 .addClass('close')
-                .append('<i class="fa fa-times-circle"></i>'); // using font-awesome times-circle for a close button
+                .append('X');
+                //.append('<i class="fa fa-times-circle"></i>'); // using font-awesome times-circle for a close button
 
             close_button.on(
                 (window.navigator.standalone ? 'touchend' : 'click'),
