@@ -14,10 +14,12 @@ function Menu(title) {
         el.addClass('visible');
         return this;
     };
+
     this.hide = function() {
         el.removeClass('visible');
         return this;
     };
+
     this.addButton = function(title, callback) {
         var button = $('<button>').addClass('button');
 

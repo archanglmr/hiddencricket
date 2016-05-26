@@ -23,15 +23,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .menu.visible { left: 0; }
 .menu h2 { text-align: center; margin: 10vh 2vw 4vh 2vw; font-size: 6vh; }
 .menu button { border: none; padding: 0; color: #b22911; vertical-align: middle; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
-.menu button.info { position: absolute; top: 3vh; right: 3vw; background-color: transparent; color: #666; font-size: 10vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 0 0 2vw; }
+.menu button.info { position: absolute; top: 3vh; right: 3vw; background-color: transparent; color: #bcb1a4; font-size: 7vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 0 0 2vw; }
 .menu button.button { margin: 0 2vw 2vw 2vw; width: 96vw; height: 15vh; line-height: 15vh; font-size: 5vh; background-color: #bcb1a4; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; }
+
+/* earth tones */
+/* pastel */
+.info_panel { width: 100vw; height: 100vh; background-color: #000; margin: 0; padding: 0; position: absolute; top: 0; left: -100vw; opacity: 0; -moz-transition: opacity 200ms ease-in-out; -o-transition: opacity 200ms ease-in-out; -webkit-transition: opacity 200ms ease-in-out; transition: opacity 200ms ease-in-out; }
+.info_panel.visible { left: 0; opacity: 1; }
+.info_panel h2 { margin: 10vh 6vw 3vh 6vw; font-size: 6vh; }
+.info_panel p { margin: 0 6vw 4vw 6vw; width: 82vw; line-height: 5vh; font-size: 4vh; }
+.info_panel button { border: none; padding: 0; color: #b22911; vertical-align: middle; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; }
+.info_panel button.close { position: absolute; top: 3vh; right: 3vw; background-color: transparent; color: #bcb1a4; font-size: 7vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 0 0 2vw; }
+.info_panel button.button { margin: 0 2vw 2vw 2vw; width: 96vw; height: 15vh; line-height: 15vh; font-size: 5vh; background-color: #bcb1a4; -moz-border-radius: 2vmin; -webkit-border-radius: 2vmin; border-radius: 2vmin; }
 
 body { font-family: -apple-system, Times New Roman, Helvetica Neue, Arial, sans-serif; font-weight: 300; height: 100vh; width: 100vw; overflow: hidden; background-color: #000; color: #b22911; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 @media only screen and (orientation: portrait) { body.standalone .dartboard_container { margin-top: 5vh; } }
 
 *, html { font-weight: 300; }
 
-button.reset { position: absolute; top: 3vh; left: 3vw; background-color: transparent; border: none; color: #666; font-size: 10vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 2vw 0 0; }
+button.reset { position: absolute; top: 3vh; left: 3vw; background-color: transparent; border: none; color: #bcb1a4; font-size: 10vmin; font-weight: 200; line-height: 10vmin; margin: 0; padding: 0 2vw 0 0; }
 
 .dartboard_container { width: 96vw; margin: 4vh 2vw; text-align: center; max-height: 52vh; }
 

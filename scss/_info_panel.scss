@@ -1,7 +1,7 @@
 @import "colors";
 @import "config";
 
-.menu {
+.info_panel {
     width: 100vw;
     height: 100vh;
     background-color: $app_background_color;
@@ -11,16 +11,24 @@
     position: absolute;
     top: 0;
     left: -100vw;
-    @include single-transition(left, ($transition-duration * 2), ease-in-out);
+    opacity: 0;
+    @include single-transition(opacity, ($transition-duration * 2), ease-in-out);
 
     &.visible {
         left: 0;
+        opacity: 1;
     }
 
     h2 {
-        text-align: center;
-        margin: 10vh 2vw 4vh 2vw;
+        margin: 10vh 6vw 3vh 6vw;
         font-size: 6vh;
+    }
+    p {
+        margin: 0 6vw 4vw 6vw;
+        width: 82vw;
+
+        line-height: 5vh;
+        font-size: 4vh;
     }
     button {
         border: none;
@@ -29,7 +37,7 @@
         vertical-align: middle;
         @include single-transition(all, $transition-duration, ease-in-out);
 
-        &.info {
+        &.close {
             position: absolute;
             top: 3vh;
             right: 3vw;

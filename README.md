@@ -4,7 +4,7 @@ Keeps track of the numbers found in a game of Hidden Cricket (because I have a h
 **Try it on your phone!** - http://archanglmr.github.io/hiddencricket/
 
 # Directions
-As players hit numbers on the real life dartboard you tap picture where they hit or the number in the list to check it off. As long as there are undiscovered numbers you now have a visual and a list of what numbers are left on the board to aim for.
+As players hit numbers on the real life dartboard you tap the picture where they hit or the number in the list to check it off. As long as there are undiscovered numbers you now have a visual and a list of what numbers are left on the board to aim for.
 
 # What is Hidden Cricket?
 It's basically the darts game Cricket except instead of the traditional 15-20 and bulls eye you don't know what numbers have value until you explore the board (by hitting them). This game variation is on the Phoenix electronic soft-tip boards found in many bars.

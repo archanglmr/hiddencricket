@@ -11,6 +11,7 @@ $(function() {
         dartboard = false,
         sectors = {},
 
+        help_panel = build_help(),
         menu = build_menu(),
         standalone_mode = !!window.navigator.standalone, // is this in the app/standalone mode?
         button_press_event = standalone_mode ? 'touchend' : 'click';
@@ -51,7 +52,8 @@ $(function() {
                 dartboard_container,
                 $('<h2>').addClass('numbers').text('Open Numbers'),
                 numbers_list,
-                menu.getElement()
+                menu.getElement(),
+                help_panel.getElement()
             );
         });
 
@@ -70,6 +72,22 @@ $(function() {
 
 
     /**
+     * Builds the instructional help menu.
+     *
+     * @returns {InfoPanel}
+     */
+    function build_help() {
+        var help = new InfoPanel();
+
+        help.addCloseButton()
+            .addElement('<h2>Directions</h2>')
+            //.addElement()
+            .addElement('<p>As players throw at a real life dartboard tap the graphic or number in the list to check it off. What\'s left is a visual and list of undiscovered numbers to aim for.</p>');
+
+        return help;
+    }
+
+    /**
      * Builds the game menu.
      *
      * @returns {Menu}
@@ -78,7 +96,9 @@ $(function() {
         var menu = new Menu('Menu'),
             help_button;
 
-        help_button = menu.addButton('Help');
+        help_button = menu.addButton('Help', function() {
+            help_panel.show();
+        });
         help_button
             .removeClass('button')
             .addClass('info')
