@@ -26,7 +26,7 @@ More info on Cricket - https://en.wikipedia.org/wiki/Cricket_(darts)
   - **Local Storage** - Standalone Mode reloads the page every time you launch it as an app. Sometimes if you haven't used the web browser in a while it will also reload the page. Local Storage lets me keep the state of the app so you don't lose your game.
 - **Assets**
   - **SVG** - Found a sample SVG dartboard and restructured it completely to make it functional. SVG needs to be inline in order for CSS to be able to style each element so I loaded it with AJAX and inline it myself to keep the SVG file standalone.
-  - **Font Awesome** - That pretty little menu back arrow thing is much nicer than using the less-than character (<). - http://fontawesome.io
+  - **~~Font Awesome~~** - That pretty little menu back arrow thing is much nicer than using the less-than character (<). - http://fontawesome.io
 - **Version Control**
   - **Git** - Really to play with GitHub.
   - **GitHub Pages** - Excellent for free hosting and automatically deploys using this guys tip. - http://brettterpstra.com/2012/09/26/github-tip-easily-sync-your-master-to-github-pages/
