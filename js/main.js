@@ -1,7 +1,5 @@
 $(function() {
     "use strict";
-    // @todo: fix SVG numbers (use fonts)
-    // @todo: Add directions to menu, maybe reposition menu buttons a bit
 
     var body = $('body'),
         numbers_list = $('<nav>').addClass('numbers_list'),
