@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "compass/reset";
-@import "compass/css3";
+@import "reset";
+@import "bourbon";
 
 @import "colors";
 @import "config";
@@ -83,8 +83,8 @@ h2.numbers { // 6%h
         text-align: center;
         vertical-align: middle;
         font-size: 5vmin; // used width because button can be tall and narrow
-        @include border-radius(2vmin);
-        @include single-transition(all, $transition-duration, ease-in-out);
+        border-radius: 2vmin;
+        @include transition(all, $transition-duration, ease-in-out);
 
         &.closed {
             text-decoration: line-through;
@@ -105,7 +105,7 @@ h2.numbers { // 6%h
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
     .sector {
-        @include single-transition(all, $transition-duration, ease-in-out);
+        @include transition(all, $transition-duration, ease-in-out);
         &.dark {
             .single { fill: $dark_primary; }
             .double { fill: $dark_secondary; }

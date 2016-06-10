@@ -1,0 +1,40 @@
+{
+  "name": "hiddencricket",
+  "version": "1.0.0",
+  "description": "Keeps track of the numbers found in a game of hidden cricket.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack",
+    "production": "NODE_ENV='production' node server.js"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archanglmr/hiddencricket.git"
+  },
+  "keywords": [
+    "darts",
+    "cricket",
+    "hiddencricket"
+  ],
+  "author": "Matt Rossetta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/archanglmr/hiddencricket/issues"
+  },
+  "homepage": "https://github.com/archanglmr/hiddencricket#readme",
+  "dependencies": {
+    "connect": "^3.4.1",
+    "connect-static-file": "^1.1.2",
+    "serve-static": "^1.11.0"
+  },
+  "devDependencies": {
+    "node-bourbon": "^4.2.8",
+    "node-compass": "^0.2.4",
+    "node-reset-scss": "^1.0.1",
+    "node-sass": "^3.7.0",
+    "node-sass-middleware": "^0.9.8",
+    "webpack": "^1.13.1"
+  }
+}
