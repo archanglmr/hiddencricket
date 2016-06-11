@@ -18,7 +18,7 @@ More info on Cricket - https://en.wikipedia.org/wiki/Cricket_(darts)
   - **Viewport (CSS Unit)** - Everything scales relative to the size of the viewport using `vw` and `vh` instead of pixels or percent. - https://css-tricks.com/viewport-sized-typography/
   - **Responsive** - Works equally well from iPhone to large desktop (though I was intending phone use).
   - **SASS** - To compile SCSS files.
-    - **Compass** - Already includes my favorite browser reset as well as handy SCSS helpers.
+    - **Bourbon** - Handy SCSS helpers. - http://bourbon.io
 - **JavaScript** - To make it all work of course!
   - **jQuery** - For DOM manipulation and AJAX.
   - **Single Page Web Application** - JavaScript generates and manages the page (no refreshing).
