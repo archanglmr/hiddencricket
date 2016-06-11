@@ -31,5 +31,28 @@ More info on Cricket - https://en.wikipedia.org/wiki/Cricket_(darts)
   - **Git** - Really to play with GitHub.
   - **GitHub Pages** - Excellent for free hosting and automatically deploys using this guys tip. - http://brettterpstra.com/2012/09/26/github-tip-easily-sync-your-master-to-github-pages/
 
+# Download and use
+From the terminal (command line):
+```bash
+git clone https://github.com/archanglmr/hiddencricket
+cd hiddencricket
+npm install
+```
+To launch a server in a dev mode that will recompile your SASS on the fly use:
+```bash
+npm start
+```
 
+To lunch a server in production mode (you will need to run build command to see SASS changes) use:
+```bash
+npm run production
+```
 
+If you want to edit the SASS files in production mode you'll need to rebuild them to see the changes: 
+```bash
+npm run build
+```
+
+In your browser you can now go to: `http://localhost:8000`
+
+Or if you want to skip the server all together you should be able to open `index.html` directly in your browser (you won't be able to make edits in this mode).
