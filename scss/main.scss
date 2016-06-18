@@ -3,7 +3,7 @@
 @import "reset";
 @import "bourbon";
 
-@import "colors";
+@import "colors_6";
 @import "config";
 
 @import "menu";
@@ -72,9 +72,9 @@ h2.numbers { // 6%h
 
     button {
         border: none;
-        color: $text_color;
+        color: $button_color;
+        background-color: $button_background;
         display: inline-block;
-        background-color: $dark_primary;
         margin: 1vw;
         padding: 0;
         width: 12vw;
@@ -88,8 +88,8 @@ h2.numbers { // 6%h
 
         &.closed {
             text-decoration: line-through;
-            color: $closed_secondary;
-            background-color: $closed_primary;
+            color: $button_closed;
+            background-color: $button_closed_background;
         }
     }
 }
@@ -126,13 +126,13 @@ h2.numbers { // 6%h
 
         .score {
             font-size: 36px;
-            font-weight: bold;
+            font-weight: 400;
             fill: $score_color;
         }
     }
     .sector_bull {
-        .single { fill: $dark_secondary; }
-        .double { fill: $dark_primary; }
+        .single { fill: $light_secondary; }
+        .double { fill: $dark_secondary; }
         &.closed {
             .dark, { fill: $closed_primary; }
             .light { fill: $closed_secondary; }

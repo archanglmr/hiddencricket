@@ -46,15 +46,5 @@
             margin: 0;
             padding: 0 0 0 2vw;
         }
-        &.button {
-            margin: 0 2vw 2vw 2vw;
-            width: 96vw;
-            height: 15vh;
-
-            line-height: 15vh;
-            font-size: 5vh;
-            background-color: $dark_primary;
-            border-radius: 2vmin;
-        }
     }
 }
